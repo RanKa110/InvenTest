@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerItemDataManager : MonoBehaviour
 {
-    
+    public List<ItemData> items = new List<ItemData>();
 
     void Start()
     {
