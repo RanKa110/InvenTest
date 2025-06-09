@@ -7,19 +7,7 @@ public enum ItemType
     valuable,
     consumption,
     weapon,
+    armor
 
 }
 
-public enum HAZMAT
-{
-    class1,
-    class2,
-    class3,
-    class4
-    
-}
-
-public class Enums : MonoBehaviour
-{
-    
-}

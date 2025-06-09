@@ -8,18 +8,16 @@ using UnityEngine;
 
 public class ItemData : ScriptableObject
 {
-    [SerializeField] int itemNum;
-    [SerializeField] ItemType itemType;
 
-    [SerializeField] string name;
-    [SerializeField] string engName;
+    public Sprite icon;
+
+    public int itemNum;
+    public ItemType itemType;
+
+    public string name;
+    public string engName;
 
     [TextArea(3, 5)]
-    [SerializeField] string des;
-    [SerializeField] float itemValue;
-    [SerializeField] float itemWeight;
-    [SerializeField] int itemStack;
+    public string des;
 
-    [SerializeField] bool isIllegal;
-    [SerializeField] HAZMAT hazardousType;
 }
