@@ -20,4 +20,7 @@ public class ItemData : ScriptableObject
     public string des;
 
     public bool isEquip;
+
+
+    public float hp;
 }

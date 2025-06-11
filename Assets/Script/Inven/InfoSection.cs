@@ -31,9 +31,9 @@ public class InfoSection : MonoBehaviour
 
         icon.sprite = selectdItem.icon;
 
-        if(selectdItem.isEquip) equipIcon.SetActive(true);
+        if (selectdItem.isEquip) equipIcon.SetActive(true);
         else equipIcon.SetActive(false);
-    
+
         desTxt.text = selectdItem.des;
 
         if (!selectdItem.isEquip)
@@ -50,72 +50,102 @@ public class InfoSection : MonoBehaviour
 
     public void Equip()
     {
-        if(selectdItem.itemType == ItemType.weapon)
+        var player = GameManager.instance.playerManager;
+
+        if (selectdItem.itemType == ItemType.weapon)
         {
-            if(GameManager.instance.playerManager.weapon != null)
+            //    너무 중복되고 길다...
+            //    함수로 만들 수 있을텐데...
+            //    시간이가 없구나... 
+
+            //    거기다 스크립터블 데이터 원본을 쓰는건 위험해서
+            //    복사해서 쓰려 했건만은
+            //    아직 내 영역이 아니구나....!
+
+            if (player.weapon != null)
             {
-                GameManager.instance.playerManager.weapon.isEquip = false;
-                GameManager.instance.playerManager.weapon = null;
+                UnEquip();
             }
 
-            GameManager.instance.playerManager.weapon = selectdItem;
+            player.weapon = selectdItem;
+            player.weapon.isEquip = true;
+            player.hp += selectdItem.hp;
         }
-        else if(selectdItem.itemType == ItemType.armor)
+        else if (selectdItem.itemType == ItemType.armor)
         {
-            if (GameManager.instance.playerManager.armor != null)
+            if (player.armor != null)
             {
-                GameManager.instance.playerManager.armor.isEquip = false;
-                GameManager.instance.playerManager.armor = null;
+                UnEquip();
             }
 
-            GameManager.instance.playerManager.armor = selectdItem;
+            player.armor = selectdItem;
+            player.armor.isEquip = true;
+            player.hp += selectdItem.hp;
         }
-        else if(selectdItem.itemType == ItemType.accessories)
+        else if (selectdItem.itemType == ItemType.accessories)
         {
-            if (GameManager.instance.playerManager.accessories != null)
+            if (    player.accessories != null)
             {
-                GameManager.instance.playerManager.accessories.isEquip = false;
-                GameManager.instance.playerManager.accessories = null;
+                UnEquip();
             }
 
-            GameManager.instance.playerManager.accessories = selectdItem;
+            player.accessories = selectdItem;
+            player.accessories.isEquip = true;
+            player.hp += selectdItem.hp;
         }
-        else if(selectdItem.itemType == ItemType.relic)
+        else if (selectdItem.itemType == ItemType.relic)
         {
-            if (GameManager.instance.playerManager.relic != null)
+            if (player.relic != null)
             {
-                GameManager.instance.playerManager.relic.isEquip = false;
-                GameManager.instance.playerManager.relic = null;
+                UnEquip();
             }
 
-            GameManager.instance.playerManager.relic = selectdItem;
+            player.relic = selectdItem;
+            player.relic.isEquip = true;
+            player.hp += selectdItem.hp;
         }
         selectdItem.isEquip = true;
 
-        UpdateInfo();
+        GameManager.instance.uiManager.infoUI.GetComponent<MainInfo>().UpdateStatInfo();
+        GameManager.instance.invenManager.TotalUpdate();
     }
 
     public void UnEquip()
     {
+        var player = GameManager.instance.playerManager;
+
         if (selectdItem.itemType == ItemType.weapon)
         {
-            GameManager.instance.playerManager.weapon = null;
+            player.hp -= player.weapon.hp;
+
+            player.weapon.isEquip = false;
+            player.weapon = null;
         }
         else if (selectdItem.itemType == ItemType.armor)
         {
-            GameManager.instance.playerManager.armor = null;
+            player.hp -= player.armor.hp;
+
+            player.armor.isEquip = false;
+            player.armor = null;
         }
         else if (selectdItem.itemType == ItemType.accessories)
         {
-            GameManager.instance.playerManager.accessories = null;
+            player.hp -= player.accessories.hp;
+
+            player.accessories.isEquip = false;
+            player.accessories = null;
         }
         else if (selectdItem.itemType == ItemType.relic)
         {
-            GameManager.instance.playerManager.relic = null;
+            player.hp -= player.relic.hp;
+
+            player.relic.isEquip = false;
+            player.relic = null;
         }
         selectdItem.isEquip = false;
 
-        UpdateInfo();
+        GameManager.instance.invenManager.TotalUpdate();
     }
 
 }
+

@@ -18,6 +18,22 @@ public class IvenManager : MonoBehaviour
 
     public List<GameObject> invenSlots;
 
+
+    public InfoSection infoSection;
+    public EquipSection equipSection;
+
+    private void Awake()
+    {
+        infoSection = infoSection.GetComponent<InfoSection>();
+        equipSection = equipSection.GetComponent<EquipSection>();
+
+        foreach(var slot in invenSlots)
+        {
+            slot.GetComponent<Slot>().UpdateState();
+        }
+    }
+
+
     private void Start()
     {
         this.gameObject.SetActive(false);
@@ -53,4 +69,10 @@ public class IvenManager : MonoBehaviour
     }
 
    
+    public void TotalUpdate()
+    {
+        equipSection.UpdateEquipSection();
+        infoSection.UpdateInfo();
+    }
+
 }

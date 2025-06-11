@@ -12,6 +12,7 @@ public class UIManager : MonoBehaviour
     public GameObject statUI;
     public GameObject invenUI;
 
+    public GameObject infoUI;
 
     public void OnInvenUI()
     {

@@ -38,7 +38,7 @@ public class Slot : MonoBehaviour
 
         if (!slotIcon.activeInHierarchy) slotIcon.SetActive(true);
       
-        if (itemData.isEquip) equipIcon.SetActive(true);
+        if (itemData.item.isEquip) equipIcon.SetActive(true);
         else equipIcon.SetActive(false);
 
         slotIcon.GetComponent<Image>().sprite = itemData.icon;

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: f2c6f216748c23e48844cac363144790, type: 3}
   itemNum: 1004
-  itemType: 2
+  itemType: 0
   name: "\uCE7C"
   engName: Sword
   des: "\uD754\uD558\uB514 \uD754\uD55C \uCE7C \uC785\uB2C8\uB2E4. \uC704\uD611\uC801\uC73C\uB85C
@@ -22,3 +22,5 @@ MonoBehaviour:
     \uC790\uACA9\uC99D\uC774 \uD544\uC694\uD558\uAE30 \uB54C\uBB38\uC5D0 \uB0A0\uC774
     \uC11C\uC788\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4. \uADF8\uB798\uB3C4 \uBB34\uC11C\uC6CC\uBCF4\uC774\uB294\uB370\uC5D0\uB294
     \uC131\uACF5\uD55C \uAC83 \uAC19\uB124\uC694."
+  isEquip: 0
+  hp: 5

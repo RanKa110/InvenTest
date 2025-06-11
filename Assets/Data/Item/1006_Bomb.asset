@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 6f9ba8aab6a44524980f66569407511f, type: 3}
   itemNum: 1006
-  itemType: 2
+  itemType: 0
   name: "\uD3ED\uD0C4"
   engName: Bomb
   des: "\uD3ED\uBC1C\uC740 \uC608\uC220\uC774\uB2E4! \uB2E4 \uD130\uD2B8\uB9AC\uACE0,
     \uB2E4 \uBD80\uC234\uBC84\uB9AC\uC138\uC694! "
+  isEquip: 0
+  hp: 5

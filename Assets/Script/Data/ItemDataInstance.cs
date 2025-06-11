@@ -17,6 +17,8 @@ public class ItemDataInstance
 
     public bool isEquip;
 
+    public float hp;
+
     public ItemDataInstance(ItemData item)
     {
         this.item = item;
@@ -29,5 +31,7 @@ public class ItemDataInstance
         this.des = item.des;
 
         this.isEquip = item.isEquip;
+
+        this.hp = item.hp;
     }
 }

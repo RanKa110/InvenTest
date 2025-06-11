@@ -11,33 +11,17 @@ public class PlayerManager : MonoBehaviour
     public ItemDataInstance accessories = null;
     public ItemDataInstance relic = null;
 
-    float atk;
-    float def;
-    float hp;
-    float crit;
+    public float atk;
+    public float def;
+    public float hp;
+    public float crit;
 
-    int level;
-    string name;
-    int gold;
+    public int level;
+    public string name;
+    public int gold;
 
     public GameObject weaponSprite;
     public GameObject armorSprite;
-
-    private void Awake()
-    {
-       
-    }
-
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
 
 }
