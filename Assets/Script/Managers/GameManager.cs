@@ -9,7 +9,8 @@ public class GameManager : MonoBehaviour
     public UIManager uiManager;
     public PlayerItemDataManager playerDataManager;
     public PlayerManager playerManager;
-     
+    public IvenManager invenManager;
+
 
 
     private void Awake()
@@ -24,8 +25,10 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        uiManager = gameObject.GetComponent<UIManager>();
-        playerManager = gameObject.GetComponent<PlayerManager>();
+        uiManager = uiManager.GetComponent<UIManager>();
+        playerManager = playerManager.GetComponent<PlayerManager>();
         playerDataManager = playerDataManager.GetComponent<PlayerItemDataManager>();
+        invenManager = invenManager.GetComponent<IvenManager>();
     }
+
 }

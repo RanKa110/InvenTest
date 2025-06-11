@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b3bfb15917904a4281fcdbd4332619d, type: 3}
+  m_Name: 1003_Pickaxe
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: e700f7a0eba57f64f93a406ee67dff41, type: 3}
+  itemNum: 1003
+  itemType: 2
+  name: "\uACE1\uAD2D\uC774"
+  engName: Pickaxe
+  des: "\uC0DD\uAC01\uBCF4\uB2E4 \uC5EC\uB7EC \uB9E4\uCCB4\uC5D0\uC11C \uBCF4\uC774\uB294
+    \uACE1\uAD2D\uC774 \uC785\uB2C8\uB2E4. \uAC8C\uC784\uC5D0\uC11C \uBCF4\uC774\uB294
+    \uBAA8\uC2B5\uACFC\uB294 \uB2EC\uB9AC \uB108\uBB34 \uBB34\uAC70\uC6CC \uB2E4\uB978
+    \uAC8C\uC784\uCC98\uB7FC \uD718\uB450\uB974\uAE30\uC5D0\uB294 \uBB34\uB9AC\uAC00
+    \uB9CE\uC740 \uAC83 \uAC19\uC2B5\uB2C8\uB2E4."
